@@ -5,6 +5,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const subtabButtons = document.querySelectorAll(".subtab-button"); // 하위 탭 버튼
     const subtabContents = document.querySelectorAll(".subtab-content"); // 하위 탭 콘텐츠
 
+    // 기본값 설정: 각 탭에서 기본 하위 탭 활성화
+    const defaultSubtabs = {
+        hawaiian: "english", // Hawaiian 탭의 기본 하위 탭: For English
+        "tourist-attraction": "hawaiian-islands-map" // Tourist Attraction 탭의 기본 하위 탭: Hawaiian Islands Map
+    };
+
     // 상위 탭 전환
     tabButtons.forEach(button => {
         button.addEventListener("click", () => {
@@ -17,8 +23,16 @@ document.addEventListener("DOMContentLoaded", function () {
             const targetTab = button.getAttribute("data-tab");
             document.getElementById(targetTab).classList.add("active");
 
-            // 하위 탭 콘텐츠 초기화 (모든 하위 콘텐츠 숨기기)
+            // 하위 탭 콘텐츠 초기화 및 기본값 활성화
             subtabContents.forEach(subContent => subContent.classList.remove("active"));
+            subtabButtons.forEach(subButton => subButton.classList.remove("active"));
+
+            // 기본 하위 탭 활성화
+            const defaultSubtabId = defaultSubtabs[targetTab];
+            if (defaultSubtabId) {
+                document.querySelector(`[data-subtab="${defaultSubtabId}"]`).classList.add("active");
+                document.getElementById(defaultSubtabId).classList.add("active");
+            }
         });
     });
 

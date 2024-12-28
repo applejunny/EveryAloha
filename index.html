@@ -7,7 +7,29 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Welcome to My EveryAloha</h1>
-    <p>This is my first GitHub Pages site!</p>
+    <header>
+        <h1>Welcome to My Website</h1>
+    </header>
+    <main>
+        <div class="tabs">
+            <!-- 탭 버튼 -->
+            <button class="tab-button active" data-tab="language">Language</button>
+            <button class="tab-button" data-tab="culture">Culture</button>
+        </div>
+
+        <!-- 탭 콘텐츠 -->
+        <div id="language" class="tab-content active">
+            <h2>Language</h2>
+            <p>This is the Language tab content.</p>
+        </div>
+        <div id="culture" class="tab-content">
+            <h2>Culture</h2>
+            <p>This is the Culture tab content.</p>
+        </div>
+    </main>
+    <footer>
+        <p>© 2024 My Website</p>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>

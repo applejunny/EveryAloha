@@ -8,10 +8,27 @@ body {
 }
 
 header {
-    background-color: #007BFF;
+    position: relative;
     color: white;
-    padding: 20px;
+    padding: 40px 20px;
     text-align: center;
+    font-size: 36px;
+    z-index: 1; /* 텍스트를 배경 위로 표시 */
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('images/hawaii.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.5; /* 배경 이미지의 투명도를 50%로 설정 */
+    z-index: -1; /* 배경 이미지를 텍스트 뒤로 배치 */
 }
 
 /* 상위 탭 버튼 스타일 */

@@ -14,13 +14,12 @@
         <!-- 상위 탭 버튼 -->
         <div class="tabs">
             <button class="tab-button active" data-tab="hawaiian">Hawaiian</button>
-            <button class="tab-button" data-tab="culture">Culture</button>
+            <button class="tab-button" data-tab="tourist-attraction">Tourist Attraction</button>
         </div>
 
         <!-- Hawaiian 탭 콘텐츠 -->
         <div id="hawaiian" class="tab-content active">
             <h2>Hawaiian</h2>
-            <!-- 하위 탭 버튼 -->
             <div class="subtabs">
                 <button class="subtab-button active" data-subtab="korean">한국어</button>
                 <button class="subtab-button" data-subtab="english">For English</button>
@@ -28,14 +27,7 @@
 
             <!-- 한국어 하위 탭 콘텐츠 -->
             <div id="korean" class="subtab-content active">
-                <h3>
-                    하와이어 단어와 문장
-                    <span class="spacer">/</span>
-                    <span class="translator">
-                        하와이어 번역기 : 
-                        <a href="https://www.freemorn.com/translator/hawaiian/" target="_blank">FreeMorn</a>
-                    </span>
-                </h3>
+                <h3>하와이어 단어와 문장</h3>
                 <div class="split">
                     <!-- 좌측: 단어 -->
                     <div class="left">
@@ -124,14 +116,7 @@
 
             <!-- For English 하위 탭 콘텐츠 -->
             <div id="english" class="subtab-content">
-                <h3>
-                    Hawaiian Words and Sentences
-                    <span class="spacer">/</span>
-                    <span class="translator">
-                        Hawaiian Translator : 
-                        <a href="https://www.translate.com/hawaiian-english" target="_blank">Translate.com</a>
-                    </span>
-                </h3>
+                <h3>Hawaiian Words and Sentences</h3>
                 <div class="split">
                     <!-- 좌측: 단어 -->
                     <div class="left">
@@ -217,6 +202,20 @@
                     </div>
                 </div>
             </div>
+        </div>
+
+        <!-- Tourist Attraction 탭 콘텐츠 -->
+        <div id="tourist-attraction" class="tab-content">
+            <h2>Tourist Attraction</h2>
+            <div class="subtabs">
+                <button class="subtab-button active" data-subtab="hawaiian-islands-map">Hawaiian Islands Map</button>
+                <button class="subtab-button" data-subtab="waikiki-beach">Waikiki Beach</button>
+                <button class="subtab-button" data-subtab="hanauma-bay">Hanauma Bay</button>
+                <button class="subtab-button" data-subtab="punchbowl-crater">Punchbowl Crater</button>
+                <button class="subtab-button" data-subtab="haleakala-national-park">Haleakalā National Park</button>
+                <button class="subtab-button" data-subtab="napali-coast">Nā Pali Coast</button>
+            </div>
+            <!-- Tourist Attraction 콘텐츠 생략 -->
         </div>
     </main>
     <footer>

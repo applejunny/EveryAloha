@@ -1,11 +1,9 @@
-// script.js
-
 document.addEventListener("DOMContentLoaded", function () {
-    const tabButtons = document.querySelectorAll(".tab-button");
-    const tabContents = document.querySelectorAll(".tab-content");
+    const tabButtons = document.querySelectorAll(".tab-button"); // 상위 탭 버튼
+    const tabContents = document.querySelectorAll(".tab-content"); // 상위 탭 콘텐츠
 
-    const subtabButtons = document.querySelectorAll(".subtab-button");
-    const subtabContents = document.querySelectorAll(".subtab-content");
+    const subtabButtons = document.querySelectorAll(".subtab-button"); // 하위 탭 버튼
+    const subtabContents = document.querySelectorAll(".subtab-content"); // 하위 탭 콘텐츠
 
     // 상위 탭 전환
     tabButtons.forEach(button => {
@@ -18,6 +16,9 @@ document.addEventListener("DOMContentLoaded", function () {
             button.classList.add("active");
             const targetTab = button.getAttribute("data-tab");
             document.getElementById(targetTab).classList.add("active");
+
+            // 하위 탭 콘텐츠 초기화 (모든 하위 콘텐츠 숨기기)
+            subtabContents.forEach(subContent => subContent.classList.remove("active"));
         });
     });
 

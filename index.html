@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Website</title>
+    <!-- CSS 파일 연결 -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,25 +12,50 @@
         <h1>Welcome to My Website</h1>
     </header>
     <main>
+        <!-- 상위 탭 버튼 -->
         <div class="tabs">
-            <!-- 탭 버튼 -->
             <button class="tab-button active" data-tab="language">Language</button>
             <button class="tab-button" data-tab="culture">Culture</button>
         </div>
 
-        <!-- 탭 콘텐츠 -->
+        <!-- Language 탭 콘텐츠 -->
         <div id="language" class="tab-content active">
             <h2>Language</h2>
-            <p>This is the Language tab content.</p>
+            <!-- 하위 탭 버튼 -->
+            <div class="subtabs">
+                <button class="subtab-button active" data-subtab="english">English</button>
+                <button class="subtab-button" data-subtab="spanish">Spanish</button>
+            </div>
+            <!-- 하위 탭 콘텐츠 -->
+            <div id="english" class="subtab-content active">
+                <p>Welcome to the English section!</p>
+            </div>
+            <div id="spanish" class="subtab-content">
+                <p>¡Bienvenido a la sección de español!</p>
+            </div>
         </div>
+
+        <!-- Culture 탭 콘텐츠 -->
         <div id="culture" class="tab-content">
             <h2>Culture</h2>
-            <p>This is the Culture tab content.</p>
+            <!-- 하위 탭 버튼 -->
+            <div class="subtabs">
+                <button class="subtab-button active" data-subtab="music">Music</button>
+                <button class="subtab-button" data-subtab="art">Art</button>
+            </div>
+            <!-- 하위 탭 콘텐츠 -->
+            <div id="music" class="subtab-content active">
+                <p>Explore the world of music!</p>
+            </div>
+            <div id="art" class="subtab-content">
+                <p>Discover amazing art!</p>
+            </div>
         </div>
     </main>
     <footer>
         <p>© 2024 My Website</p>
     </footer>
+    <!-- JavaScript 파일 연결 -->
     <script src="script.js"></script>
 </body>
 </html>

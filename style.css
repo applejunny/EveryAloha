@@ -1,0 +1,73 @@
+/* 기본 스타일 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #007BFF;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* 상위 탭 버튼 스타일 */
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.tab-button {
+    padding: 10px 20px;
+    margin: 0 5px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.tab-button.active {
+    background-color: #0056b3;
+}
+
+/* 하위 탭 버튼 스타일 */
+.subtabs {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.subtab-button {
+    padding: 5px 15px;
+    margin: 0 5px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.subtab-button.active {
+    background-color: #0056b3;
+}
+
+/* 콘텐츠 스타일 */
+.tab-content, .subtab-content {
+    display: none;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 20px;
+}
+
+.tab-content.active, .subtab-content.active {
+    display: block;
+}

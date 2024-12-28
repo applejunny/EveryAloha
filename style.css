@@ -122,3 +122,13 @@ table th {
 .spacer {
     padding: 0 10px;
 }
+
+/* Hawaiian Islands Map 이미지 스타일 */
+#hawaiian-islands-map img {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}

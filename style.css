@@ -10,10 +10,6 @@ body {
 /* 헤더 스타일 */
 header {
     position: relative;
-    background-image: url('images/hawaii.jpg'); /* 하와이 배경 이미지 */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     color: black; /* 텍스트 색상을 검은색으로 설정 */
     padding: 40px 20px;
     text-align: center;
@@ -28,12 +24,12 @@ header::before {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('images/hawaii.jpg');
+    background-image: url('images/hawaii.jpg'); /* 하와이 배경 이미지 */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    opacity: 0.5; /* 배경 이미지 투명도 50% */
-    z-index: -1;
+    opacity: 0.5; /* 배경 이미지를 50% 투명도로 설정 */
+    z-index: -1; /* 배경 이미지를 텍스트 뒤로 배치 */
 }
 
 /* 상위 탭 버튼 스타일 */
@@ -58,30 +54,8 @@ header::before {
     background-color: #0056b3;
 }
 
-/* 하위 탭 버튼 스타일 */
-.subtabs {
-    display: flex;
-    justify-content: center;
-    margin: 10px 0;
-}
-
-.subtab-button {
-    padding: 5px 15px;
-    margin: 0 5px;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 14px;
-}
-
-.subtab-button.active {
-    background-color: #0056b3;
-}
-
 /* 콘텐츠 스타일 */
-.tab-content, .subtab-content {
+.tab-content {
     display: none;
     padding: 20px;
     background-color: #fff;
@@ -90,6 +64,6 @@ header::before {
     margin: 20px;
 }
 
-.tab-content.active, .subtab-content.active {
+.tab-content.active {
     display: block;
 }

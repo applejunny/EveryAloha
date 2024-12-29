@@ -33,6 +33,55 @@ header::before {
     z-index: -1;
 }
 
+/* 테이블 스타일 */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0;
+    table-layout: auto; /* 열 너비 자동 조정 */
+}
+
+table td, table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    font-size: 1em; /* 기본 글자 크기 */
+}
+
+table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+    text-align: left;
+}
+
+@media screen and (max-width: 768px) {
+    /* 모바일 화면에서 테이블 표시 개선 */
+    table td, table th {
+        padding: 5px; /* 테이블의 셀 패딩을 줄여서 공간 절약 */
+        font-size: 0.9em; /* 모바일에서는 폰트 크기 조금 줄임 */
+    }
+
+    /* 테이블을 세로로 쌓기 */
+    table {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    table td, table th {
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
+
+    table th {
+        position: sticky;
+        top: 0; /* 테이블 헤더를 고정시켜서 스크롤할 때 헤더가 사라지지 않도록 함 */
+        background-color: #f4f4f4;
+        z-index: 10;
+    }
+}
+
 /* 상위 탭 버튼 스타일 */
 .tabs {
     display: flex;
@@ -91,59 +140,6 @@ header::before {
     display: block;
 }
 
-/* Split Layout 스타일 */
-.split {
-    display: flex;
-    gap: 20px;
-}
-
-.left, .right {
-    width: 48%;
-}
-
-/* Table 스타일 */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 10px 0;
-    table-layout: auto;
-}
-
-table td, table th {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
-    font-size: 1em;
-}
-
-table th {
-    background-color: #f4f4f4;
-    font-weight: bold;
-    text-align: left;
-}
-
-/* / 기호 양옆에 20칸 공백 추가 */
-.subtab-button .spacing {
-    display: inline-block;
-    padding-left: 20ch;
-    padding-right: 20ch;
-}
-
-/* 하위 탭에 번역기 링크를 넣을 때 버튼과 링크의 스타일 */
-.subtab-button {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.subtab-button span {
-    padding-left: 20ch; /* / 기호 앞뒤 공백 */
-}
-
-.subtab-button .spacing {
-    margin-right: 10px; /* 링크와 공백 사이에 여백 추가 */
-}
-
 /* Waikiki Beach 콘텐츠를 수평으로 배치, 이미지 왼쪽, 설명 오른쪽 */
 .waikiki-container {
     display: flex;
@@ -155,7 +151,7 @@ table th {
 
 /* 첫 번째 이미지 스타일 (왼쪽) */
 .waikiki-image {
-    width: 66%;
+    width: 66%; /* 첫 번째 이미지는 페이지의 2/3 크기 */
     height: auto;
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -163,8 +159,8 @@ table th {
 
 /* 설명 스타일 (오른쪽) */
 .waikiki-description {
-    width: 33%;
-    font-size: 2em;
+    width: 33%; /* 설명 영역은 나머지 1/3 크기 */
+    font-size: 2em; /* 글자 크기 3배로 설정 */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -174,12 +170,12 @@ table th {
 
 /* 두 번째 이미지 스타일 (설명 아래) */
 .waikiki-image-bottom {
-    width: 80%;
+    width: 80%; /* 두 번째 이미지는 크기 80%로 설정 */
     height: auto;
     border: 1px solid #ddd;
     border-radius: 5px;
-    margin-top: 20px;
-    align-self: center;
+    margin-top: 20px; /* 첫 번째 이미지와 설명 아래에 여백 추가 */
+    align-self: center; /* 두 번째 이미지를 가운데로 정렬 */
 }
 
 /* 각 하위 탭의 설명과 이미지 사이 간격 추가 */
@@ -206,51 +202,26 @@ p {
     margin-bottom: 40px;
 }
 
-/* 테이블을 세로로 스크롤 가능하게 만들기 */
-table {
-    display: block;
-    width: 100%;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch; /* 모바일 스크롤 최적화 */
-}
-
-table td, table th {
-    display: block;
-    width: 100%;
-    text-align: left;
-    padding: 10px;
-}
-
-table th {
-    position: sticky;
-    top: 0;
-    background-color: #f4f4f4;
-    z-index: 10;
-}
-
-/* 모바일 스타일 */
+/* 모바일 화면에서의 스타일 */
 @media screen and (max-width: 768px) {
-    /* 테이블을 세로로 스크롤 가능하게 만들기 */
-    table {
-        display: block;
-        width: 100%;
-        overflow-x: auto;
+    body {
+        font-size: 16px; /* 모바일에서는 기본 폰트 크기 줄임 */
     }
 
-    table td, table th {
-        display: block;
-        width: 100%;
-        text-align: left;
+    header {
+        font-size: 28px; /* 헤더 글자 크기 조정 */
+    }
+
+    .tabs {
+        flex-direction: column; /* 탭 버튼을 세로로 배치 */
+    }
+
+    .tab-button {
+        font-size: 14px; /* 탭 버튼의 글자 크기 줄이기 */
         padding: 10px;
+        width: 100%; /* 버튼을 전체 너비로 */
     }
 
-    /* 각 셀의 간격 및 글자 크기 조정 */
-    table td {
-        font-size: 0.9em;
-        padding: 5px;
-    }
-
-    /* Waikiki Beach 이미지 크기 조정 */
     .waikiki-container {
         flex-direction: column; /* 이미지와 설명을 세로로 배치 */
         align-items: center; /* 가운데 정렬 */
@@ -258,18 +229,18 @@ table th {
 
     .waikiki-image {
         width: 100%; /* 이미지 크기 100%로 설정 */
-        margin-bottom: 10px;
+        margin-bottom: 10px; /* 이미지와 설명 간의 여백 추가 */
     }
 
     .waikiki-description {
         width: 100%; /* 설명 영역을 화면 너비에 맞게 조정 */
         font-size: 1.5em; /* 텍스트 크기 줄이기 */
-        padding-top: 10px;
+        padding-top: 10px; /* 설명의 상단 여백 추가 */
     }
 
     .waikiki-image-bottom {
-        width: 90%;
-        height: auto;
+        width: 90%; /* 두 번째 이미지 크기 */
+        margin-top: 20px; /* 첫 번째 이미지와 두 번째 이미지 간의 여백 */
     }
 }
 
@@ -296,4 +267,26 @@ table th {
         width: 100%;
         height: auto;
     }
+}
+
+/* / 기호 양옆에 20칸 공백 추가 */
+.subtab-button .spacing {
+    display: inline-block;
+    padding-left: 20ch;
+    padding-right: 20ch;
+}
+
+/* 하위 탭에 번역기 링크를 넣을 때 버튼과 링크의 스타일 */
+.subtab-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.subtab-button span {
+    padding-left: 20ch; /* / 기호 앞뒤 공백 */
+}
+
+.subtab-button .spacing {
+    margin-right: 10px; /* 링크와 공백 사이에 여백 추가 */
 }

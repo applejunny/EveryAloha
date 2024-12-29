@@ -185,6 +185,6 @@ table th {
 /* 설명 스타일 (오른쪽 정렬) */
 .waikiki-description {
     width: 35%; /* 설명 영역은 나머지 1/3 크기 */
-    padding: 20px;
+    padding: 50px;
     text-align: left; /* 왼쪽 정렬 */
 }

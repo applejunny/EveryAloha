@@ -227,3 +227,74 @@ p {
 #napali-coast {
     margin-bottom: 40px;
 }
+
+/* 기존의 style.css 코드 */
+
+/* ... (기존 코드) ... */
+
+/* 모바일 화면에 맞게 스타일 조정 */
+@media (max-width: 768px) {
+    header {
+        font-size: 28px;
+    }
+
+    .tabs {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tab-button {
+        font-size: 14px;
+        padding: 10px;
+        width: 100%;
+    }
+
+    .waikiki-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .waikiki-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .waikiki-description {
+        width: 100%;
+        font-size: 1.5em;
+    }
+
+    .waikiki-image-bottom {
+        width: 100%;
+        height: auto;
+        margin-top: 20px;
+    }
+}
+
+/* 더 작은 모바일 화면에 맞게 스타일 조정 */
+@media (max-width: 480px) {
+    header {
+        font-size: 24px;
+    }
+
+    .tab-button {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .waikiki-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .waikiki-description {
+        width: 100%;
+        font-size: 1.2em;
+    }
+
+    .waikiki-image-bottom {
+        width: 100%;
+        height: auto;
+        margin-top: 15px;
+    }
+}

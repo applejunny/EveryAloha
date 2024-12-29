@@ -5,6 +5,7 @@ body {
     padding: 0;
     background-color: #f4f4f4;
     color: #333;
+    min-width: 320px; /* 최소 화면 너비 설정 */
 }
 
 /* 헤더 스타일 */
@@ -97,7 +98,7 @@ header::before {
 }
 
 .left, .right {
-    width: 48%;
+    width: 48%; /* 좌우 균등 분할 */
 }
 
 /* Table 스타일 */
@@ -131,39 +132,6 @@ table th {
     height: auto;
     border: 1px solid #ddd;
     border-radius: 5px;
-}
-
-/* 번역기 링크 스타일 */
-.subtab-button a {
-    color: #007bff;
-    text-decoration: none;
-    padding-left: 10px;
-}
-
-.subtab-button a:hover {
-    text-decoration: underline;
-}
-
-/* / 기호 양옆에 20칸 공백 추가 */
-.subtab-button .spacing {
-    display: inline-block;
-    padding-left: 20ch;
-    padding-right: 20ch;
-}
-
-/* 하위 탭에 번역기 링크를 넣을 때 버튼과 링크의 스타일 */
-.subtab-button {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.subtab-button span {
-    padding-left: 20ch; /* / 기호 앞뒤 공백 */
-}
-
-.subtab-button .spacing {
-    margin-right: 10px; /* 링크와 공백 사이에 여백 추가 */
 }
 
 /* Waikiki Beach 콘텐츠를 수평으로 배치, 이미지 왼쪽, 설명 오른쪽 */
@@ -228,58 +196,56 @@ p {
     margin-bottom: 40px;
 }
 
-/* 기존의 style.css 코드 */
+/* 모바일 화면에서의 스타일 */
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 16px; /* 모바일에서는 기본 폰트 크기 줄임 */
+    }
 
-/* ... (기존 코드) ... */
-
-/* 모바일 화면에 맞게 스타일 조정 */
-@media (max-width: 768px) {
     header {
-        font-size: 28px;
+        font-size: 28px; /* 헤더 글자 크기 조정 */
     }
 
     .tabs {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column; /* 탭 버튼을 세로로 배치 */
     }
 
     .tab-button {
-        font-size: 14px;
+        font-size: 14px; /* 탭 버튼의 글자 크기 줄이기 */
         padding: 10px;
-        width: 100%;
+        width: 100%; /* 버튼을 전체 너비로 */
     }
 
     .waikiki-container {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: column; /* 이미지와 설명을 세로로 배치 */
+        align-items: center; /* 가운데 정렬 */
     }
 
     .waikiki-image {
-        width: 100%;
-        height: auto;
+        width: 100%; /* 이미지 크기 100%로 설정 */
+        margin-bottom: 10px; /* 이미지와 설명 간의 여백 추가 */
     }
 
     .waikiki-description {
-        width: 100%;
-        font-size: 1.5em;
+        width: 100%; /* 설명 영역을 화면 너비에 맞게 조정 */
+        font-size: 1.5em; /* 텍스트 크기 줄이기 */
+        padding-top: 10px; /* 설명의 상단 여백 추가 */
     }
 
     .waikiki-image-bottom {
-        width: 100%;
-        height: auto;
-        margin-top: 20px;
+        width: 90%; /* 두 번째 이미지 크기 */
+        margin-top: 20px; /* 첫 번째 이미지와 두 번째 이미지 간의 여백 */
     }
 }
 
-/* 더 작은 모바일 화면에 맞게 스타일 조정 */
-@media (max-width: 480px) {
+/* 더 작은 모바일 화면에서의 스타일 조정 */
+@media screen and (max-width: 480px) {
     header {
-        font-size: 24px;
+        font-size: 24px; /* 헤더 글자 크기 더 줄이기 */
     }
 
     .tab-button {
-        font-size: 12px;
-        padding: 8px;
+        font-size: 12px; /* 탭 버튼의 글자 크기 더 줄이기 */
     }
 
     .waikiki-image {
@@ -288,13 +254,33 @@ p {
     }
 
     .waikiki-description {
-        width: 100%;
         font-size: 1.2em;
     }
 
     .waikiki-image-bottom {
         width: 100%;
         height: auto;
-        margin-top: 15px;
     }
+}
+
+/* / 기호 양옆에 20칸 공백 추가 */
+.subtab-button .spacing {
+    display: inline-block;
+    padding-left: 20ch;
+    padding-right: 20ch;
+}
+
+/* 하위 탭에 번역기 링크를 넣을 때 버튼과 링크의 스타일 */
+.subtab-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.subtab-button span {
+    padding-left: 20ch; /* / 기호 앞뒤 공백 */
+}
+
+.subtab-button .spacing {
+    margin-right: 10px; /* 링크와 공백 사이에 여백 추가 */
 }

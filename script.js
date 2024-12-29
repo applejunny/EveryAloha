@@ -7,8 +7,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // 기본값 설정 객체
     const defaultSubtabs = {
-        hawaiian: "english", // Hawaiian 탭의 기본 하위 탭
-        "tourist-attraction": "hawaiian-islands-map" // Tourist Attraction 탭의 기본 하위 탭
+        hawaiian: "english", // Hawaiian 탭 기본 하위 탭
+        "tourist-attraction": "hawaiian-islands-map" // Tourist Attraction 탭 기본 하위 탭
     };
 
     // 상위 탭 전환

@@ -204,3 +204,57 @@ table th {
     align-self: center; /* 두 번째 이미지를 가운데로 정렬 */
 }
 
+/* 기존의 style.css 내용 */
+
+/* Waikiki Beach 콘텐츠를 수평으로 배치, 이미지 왼쪽, 설명 오른쪽 */
+.waikiki-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+/* 첫 번째 이미지 스타일 (왼쪽) */
+.waikiki-image {
+    width: 66%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* 설명 스타일 (오른쪽) */
+.waikiki-description {
+    width: 33%;
+    font-size: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: left;
+    padding-top: 20px;
+}
+
+/* 두 번째 이미지 스타일 (설명 아래) */
+.waikiki-image-bottom {
+    width: 80%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 20px;
+    align-self: center;
+}
+
+/* 각 하위 탭의 설명과 이미지 사이 간격 추가 */
+.subtab-content {
+    margin-bottom: 40px;
+}
+
+/* 추가적인 스타일 (선택사항) */
+h3 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2em;
+}

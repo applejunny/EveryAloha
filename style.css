@@ -147,7 +147,8 @@ table th {
 /* / 기호 양옆에 20칸 공백 추가 */
 .subtab-button .spacing {
     display: inline-block;   /* inline-block을 사용하여 요소를 띄울 수 있게 */
-    width: 20ch;             /* 20칸 공백 */
+    padding-left: 20ch;       /* 20칸 공백 왼쪽 */
+    padding-right: 20ch;      /* 20칸 공백 오른쪽 */
 }
 
 /* 하위 탭에 번역기 링크를 넣을 때 버튼과 링크의 스타일 */
@@ -159,4 +160,8 @@ table th {
 
 .subtab-button span {
     padding-left: 20ch; /* / 기호 앞뒤 공백 */
+}
+
+.subtab-button .spacing {
+    margin-right: 10px; /* 링크와 공백 사이에 여백 추가 */
 }

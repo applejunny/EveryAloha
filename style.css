@@ -258,3 +258,66 @@ h3 {
 p {
     font-size: 1.2em;
 }
+
+/* 기본적인 스타일 설정 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Waikiki Beach 콘텐츠를 수평으로 배치, 이미지 왼쪽, 설명 오른쪽 */
+.waikiki-container {
+    display: flex;
+    flex-direction: row; /* 이미지와 설명을 가로로 배치 */
+    gap: 20px; /* 이미지와 설명 사이 여백 */
+    margin-bottom: 40px; /* 각 하위 탭의 콘텐츠 아래 여백 추가 */
+    width: 100%;
+    align-items: flex-start; /* 첫 번째 이미지와 두 번째 이미지 하단 맞추기 */
+}
+
+/* 첫 번째 이미지 스타일 (왼쪽) */
+.waikiki-image {
+    width: 66%; /* 첫 번째 이미지는 페이지의 2/3 크기 */
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* 설명 스타일 (오른쪽) */
+.waikiki-description {
+    width: 33%; /* 설명 영역은 오른쪽 절반 */
+    font-size: 2em; /* 글자 크기 3배로 설정 */
+    display: flex;
+    flex-direction: column; /* 수직 정렬 */
+    justify-content: flex-start; /* 설명을 상단에 배치 */
+    text-align: left;
+    padding-top: 20px; /* 설명과 이미지 사이 여백 추가 */
+}
+
+/* 두 번째 이미지 스타일 (설명 아래) */
+.waikiki-image-bottom {
+    width: 80%; /* 두 번째 이미지는 80% 크기 */
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 20px; /* 첫 번째 이미지와 설명과의 간격 */
+    align-self: flex-start; /* 두 번째 이미지를 첫 번째 이미지와 동일한 높이로 정렬 */
+}
+
+/* 각 하위 탭의 설명과 이미지 사이 간격 추가 */
+.subtab-content {
+    margin-bottom: 40px; /* 각 하위 탭의 콘텐츠 아래 여백 추가 */
+}
+
+/* 추가적인 스타일 (선택사항) */
+h3 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2em;
+}

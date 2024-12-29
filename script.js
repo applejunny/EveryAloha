@@ -58,3 +58,4 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById(initialSubtab).classList.add("active");
     }
 });
+

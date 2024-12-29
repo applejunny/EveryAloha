@@ -132,3 +132,34 @@ table th {
     border: 1px solid #ddd;
     border-radius: 5px;
 }
+
+/* 번역기 링크 스타일 */
+.subtab-button a {
+    color: #007bff;
+    text-decoration: none;
+    padding-left: 10px;
+}
+
+.subtab-button a:hover {
+    text-decoration: underline;
+}
+
+.subtab-button .spacing {
+    padding-left: 15ch;
+    padding-right: 15ch;
+}
+
+/* 하위 탭에 번역기 링크를 넣을 때 버튼과 링크의 스타일 */
+.subtab-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.subtab-button span {
+    padding-left: 15ch; /* 15칸 공백 */
+}
+
+.subtab-button .spacing {
+    margin-right: 10px; /* 링크와 공백 사이에 여백 추가 */
+}

@@ -165,3 +165,26 @@ table th {
 .subtab-button .spacing {
     margin-right: 10px; /* 링크와 공백 사이에 여백 추가 */
 }
+
+/* Waikki Beach 콘텐츠를 수평으로 배치, 이미지 왼쪽, 설명 오른쪽 */
+.waikiki-container {
+    display: flex;
+    flex-direction: row; /* 이미지 왼쪽, 설명 오른쪽 */
+    align-items: flex-start; /* 상단 정렬 */
+    gap: 20px; /* 설명과 이미지 사이 여백 */
+}
+
+/* 이미지 스타일 (왼쪽 정렬) */
+.waikiki-image {
+    width: 60%; /* 이미지 너비를 60%로 설정 */
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* 설명 스타일 (오른쪽 정렬) */
+.waikiki-description {
+    width: 35%; /* 설명 영역은 나머지 1/3 크기 */
+    padding: 20px;
+    text-align: left; /* 왼쪽 정렬 */
+}

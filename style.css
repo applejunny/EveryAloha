@@ -10,7 +10,7 @@ body {
 /* 헤더 스타일 */
 header {
     position: relative;
-    color: black; /* 텍스트 색상을 검은색으로 설정 */
+    color: black;
     padding: 40px 20px;
     text-align: center;
     font-size: 36px;
@@ -24,12 +24,12 @@ header::before {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('images/hawaii.jpg'); /* 하와이 배경 이미지 */
+    background-image: url('images/hawaii.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    opacity: 0.5; /* 배경 이미지를 50% 투명도로 설정 */
-    z-index: -1; /* 배경 이미지를 텍스트 뒤로 배치 */
+    opacity: 0.5;
+    z-index: -1;
 }
 
 /* 상위 탭 버튼 스타일 */
@@ -97,7 +97,7 @@ header::before {
 }
 
 .left, .right {
-    width: 48%; /* 좌우 균등 분할 */
+    width: 48%;
 }
 
 /* Table 스타일 */
@@ -146,9 +146,9 @@ table th {
 
 /* / 기호 양옆에 20칸 공백 추가 */
 .subtab-button .spacing {
-    display: inline-block;   /* inline-block을 사용하여 요소를 띄울 수 있게 */
-    padding-left: 20ch;       /* 20칸 공백 왼쪽 */
-    padding-right: 20ch;      /* 20칸 공백 오른쪽 */
+    display: inline-block;
+    padding-left: 20ch;
+    padding-right: 20ch;
 }
 
 /* 하위 탭에 번역기 링크를 넣을 때 버튼과 링크의 스타일 */
@@ -189,7 +189,7 @@ table th {
     font-size: 2em; /* 글자 크기 3배로 설정 */
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* 두 번째 이미지와의 간격을 유연하게 설정 */
+    justify-content: space-between;
     text-align: left;
     padding-top: 20px;
 }
@@ -204,52 +204,12 @@ table th {
     align-self: center; /* 두 번째 이미지를 가운데로 정렬 */
 }
 
-/* 기존의 style.css 내용 */
-
-/* Waikiki Beach 콘텐츠를 수평으로 배치, 이미지 왼쪽, 설명 오른쪽 */
-.waikiki-container {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    margin-bottom: 40px;
-    width: 100%;
-}
-
-/* 첫 번째 이미지 스타일 (왼쪽) */
-.waikiki-image {
-    width: 66%;
-    height: auto;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-/* 설명 스타일 (오른쪽) */
-.waikiki-description {
-    width: 33%;
-    font-size: 2em;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    text-align: left;
-    padding-top: 20px;
-}
-
-/* 두 번째 이미지 스타일 (설명 아래) */
-.waikiki-image-bottom {
-    width: 80%;
-    height: auto;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin-top: 20px;
-    align-self: center;
-}
-
 /* 각 하위 탭의 설명과 이미지 사이 간격 추가 */
 .subtab-content {
     margin-bottom: 40px;
 }
 
-/* 추가적인 스타일 (선택사항) */
+/* 각 탭 제목 스타일 */
 h3 {
     font-size: 2.5em;
     margin-bottom: 20px;
@@ -259,3 +219,11 @@ p {
     font-size: 1.2em;
 }
 
+/* 하위 탭 콘텐츠 스타일 */
+#waikiki-beach,
+#hanauma-bay,
+#punchbowl-crater,
+#haleakala-national-park,
+#napali-coast {
+    margin-bottom: 40px;
+}

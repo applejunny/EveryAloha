@@ -33,55 +33,6 @@ header::before {
     z-index: -1;
 }
 
-/* 테이블 스타일 */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 10px 0;
-    table-layout: auto; /* 열 너비 자동 조정 */
-}
-
-table td, table th {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
-    font-size: 1em; /* 기본 글자 크기 */
-}
-
-table th {
-    background-color: #f4f4f4;
-    font-weight: bold;
-    text-align: left;
-}
-
-@media screen and (max-width: 768px) {
-    /* 모바일 화면에서 테이블 표시 개선 */
-    table td, table th {
-        padding: 5px; /* 테이블의 셀 패딩을 줄여서 공간 절약 */
-        font-size: 0.9em; /* 모바일에서는 폰트 크기 조금 줄임 */
-    }
-
-    /* 테이블을 세로로 쌓기 */
-    table {
-        display: block;
-        width: 100%;
-        overflow-x: auto;
-    }
-
-    table td, table th {
-        display: block;
-        width: 100%;
-        text-align: left;
-    }
-
-    table th {
-        position: sticky;
-        top: 0; /* 테이블 헤더를 고정시켜서 스크롤할 때 헤더가 사라지지 않도록 함 */
-        background-color: #f4f4f4;
-        z-index: 10;
-    }
-}
-
 /* 상위 탭 버튼 스타일 */
 .tabs {
     display: flex;
@@ -138,6 +89,49 @@ table th {
 
 .tab-content.active, .subtab-content.active {
     display: block;
+}
+
+/* Split Layout 스타일 */
+.split {
+    display: flex;
+    gap: 20px;
+}
+
+.left, .right {
+    width: 48%; /* 좌우 균등 분할 */
+}
+
+/* Table 스타일 */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0;
+}
+
+table td, table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+    text-align: left;
+}
+
+.spacer {
+    padding: 0 10px;
+}
+
+/* Hawaiian Islands Map 이미지 스타일 */
+#hawaiian-islands-map img {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }
 
 /* Waikiki Beach 콘텐츠를 수평으로 배치, 이미지 왼쪽, 설명 오른쪽 */
